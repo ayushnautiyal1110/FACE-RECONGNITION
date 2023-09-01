@@ -5,6 +5,4 @@ pandas==2.0.2
 Pillow==9.1.0
 streamlit==1.25.0
 streamlit_option_menu==0.3.6
-cmake==3.27.2
-dlib==19.24.2
 
