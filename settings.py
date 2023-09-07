@@ -7,8 +7,8 @@ import cv2
 import face_recognition
 import numpy as np
 from PIL import Image
-import cmake
-import dlib
+# import cmake
+# import dlib
 ########################################################################################################################
 # The Root Directory of the project
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
