@@ -6,29 +6,30 @@ import face_recognition
 # st.set_option("deprication.showPyplotGlobalUse",False)
 # st.set_option("deprication.showPyplotGlobalUse",False)
 
-st.sidebar.markdown("Made By AYUSH NAUTIYAL :smile:")
-# attend_img=""
-st.markdown(f"""
-        <style>
-        .stApp {{
-            background-image: url("https://wytech.co.ke/wp-content/uploads/2020/06/School-Attendance-Systems.jpg");
-            background-attachment: fixed;
-            background-size: cover
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True)
-if st.sidebar.button("Click to clear the Cache"):
-    shutil.rmtree(VISITOR_DB,ignore_errors=True)
-    os.mkdir(VISITOR_DB)
-    shutil.rmtree(VISITOR_HISTORY,ignore_errors=True)
-    os.mkdir(VISITOR_HISTORY)
-if not os.path.exists(VISITOR_DB):
-    os.mkdir(VISITOR_DB)
-if not os.path.exists(VISITOR_HISTORY):
-    os.mkdir(VISITOR_HISTORY)
+
     
 def main():
+    st.sidebar.markdown("Made By AYUSH NAUTIYAL :smile:")
+# attend_img=""
+    st.markdown(f"""
+            <style>
+            .stApp {{
+                background-image: url("https://wytech.co.ke/wp-content/uploads/2020/06/School-Attendance-Systems.jpg");
+                background-attachment: fixed;
+                background-size: cover
+            }}
+            </style>
+            """,
+            unsafe_allow_html=True)
+    if st.sidebar.button("Click to clear the Cache"):
+        shutil.rmtree(VISITOR_DB,ignore_errors=True)
+        os.mkdir(VISITOR_DB)
+        shutil.rmtree(VISITOR_HISTORY,ignore_errors=True)
+        os.mkdir(VISITOR_HISTORY)
+    if not os.path.exists(VISITOR_DB):
+        os.mkdir(VISITOR_DB)
+    if not os.path.exists(VISITOR_HISTORY):
+        os.mkdir(VISITOR_HISTORY)
     st.sidebar.header("About")
     selected=option_menu(None,["Vistor Validation","View Vistor History","Add to Database"],icons=['camera','clock-history','person-plus'],default_index=0,orientation='horizontal')
     if selected=="Vistor Validation":
